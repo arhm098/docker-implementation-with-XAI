@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="{{ url_for('index') }}" method="post">
+    <label for="age">AGE : </label>
+    <input type="text" id="age" name="fage" placeholder="age">
+    
+    <label for="sex">SEX :</label>
+    <input type="text" id="sex" name="fsex" placeholder="sex">
+
+    <label for="cp">C P :</label>
+    <input type="text" id="cp" name="fcp" placeholder="cp">
+
+    <label for="trestbps">trest bps : </label>
+    <input type="text" id="trestbps" name="ftrestbps" placeholder="trestbps">
+
+    <label for="chol">CHOL : </label>
+    <input type="text" id="chol" name="fchol" placeholder="chol">
+
+    <button type="submit">ENTER</button>
+</body>
+</html>

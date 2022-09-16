@@ -1,0 +1,5 @@
+download the full dataset on https://www.kaggle.com/datasets/wordsforthewise/lending-club
+
+the "accepted.csv" is only a fraction of the full dataset for the code to run properly
+
+after downloading the data set just rename the data set to accepted.csv and start the notebook
