@@ -1,9 +1,0 @@
-FROM python:3
-
-ADD run.py /
-
-RUN pip install sklearn numpy pandas joblib
-
-COPY run run
-
-CMD ["python","./run.py"]

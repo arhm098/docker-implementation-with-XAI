@@ -1,0 +1,20 @@
+.form-body {
+display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.form-body > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+label {
+  width: 140px;
+  display: inline-block;
+}

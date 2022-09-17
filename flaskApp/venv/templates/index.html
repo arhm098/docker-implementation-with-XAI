@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
   <title>Document</title>
 </head>
-<body>
+
+<div class = 'form-body'>
+    <body>
   <form action="{{ url_for('index') }}" method="post">
-    <label for="age">AGE : </label>
-    <input type="text" id="age" name="fage" placeholder="age">
-    
-    <label for="sex">SEX :</label>
-    <input type="text" id="sex" name="fsex" placeholder="sex">
 
-    <label for="cp">C P :</label>
-    <input type="text" id="cp" name="fcp" placeholder="cp">
+    <div class = 'text-feild'>  
+      <label for="_loan_amount">loan amount : </label>
+      <input type="text" id="_loan_amount" name="f_loan_amount" placeholder="loan_amount">
+    </div>
 
-    <label for="trestbps">trest bps : </label>
-    <input type="text" id="trestbps" name="ftrestbps" placeholder="trestbps">
+    <div class = 'text-feild'>
+      <label for="term">term :</label>
+      <input type="text" id="term" name="f_term" placeholder="term">
+    </div>
 
-    <label for="chol">CHOL : </label>
-    <input type="text" id="chol" name="fchol" placeholder="chol">
+    <div class = 'text-feild'>
+      <label for="int_rate">intrest rate :</label>
+      <input type="text" id="int_rate" name="f_int_rate" placeholder="int_rate">
+    </div>
 
+    <div class = 'text-feild'>
+      <label for="installment">installment :</label>
+      <input type="text" id="installment" name="f_installment" placeholder="installment">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="sub_grade">grade(A-G) :</label>
+      <input type="text" id="sub_grade" name="f_sub_grade" placeholder="sub_grade">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="emp_length">employee length :</label>
+      <input type="text" id="emp_length" name="f_emp_length" placeholder="emp_length">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="annual_inc">annual income :</label>
+      <input type="text" id="annual_inc" name="f_annual_inc" placeholder="annual_inc">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="open_acc">open_acc :</label>
+      <input type="text" id="open_acc" name="f_open_acc" placeholder="open_acc">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="pub_rec">pub_rec :</label>
+      <input type="text" id="pub_rec" name="f_pub_rec" placeholder="pub_rec">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="revol_bal">revol_bal :</label>
+      <input type="text" id="revol_bal" name="f_revol_bal" placeholder="revol_bal">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="revol_util">revol_util :</label>
+      <input type="text" id="revol_util" name="f_revol_util" placeholder="revol_util">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="total_acc">total_acc :</label>
+      <input type="text" id="total_acc" name="f_total_acc" placeholder="total_acc">
+    </div>
+
+    <div class = 'text-feild'>
+      <label for="mort_acc">mortage account :</label>
+      <input type="text" id="mort_acc" name="f_mort_acc" placeholder="mort_acc">
+    </div>
+      
     <button type="submit">ENTER</button>
+  </div>
 </body>
+
 </html>
