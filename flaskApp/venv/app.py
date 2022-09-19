@@ -3,10 +3,6 @@ from json import load
 from pydoc import render_doc
 from flask import Flask, render_template, request
 import joblib
-import pandas as pd
-import numpy as np
-from sklearn.metrics import balanced_accuracy_score
-from sklearn.naive_bayes import GaussianNB
 from flask import Flask  			
 # from opentelemetry import trace
 # from opentelemetry.exporter.jaeger.thrift import JaegerExporter
@@ -83,7 +79,7 @@ def index():
             sub_grade = weights[str(sub_grade)]
             with tracer.start_as_current_span("processing DATA",attributes={'loan_amount':loan_amount,'term':term,'int_rate':int_rate,'installment':installment,'sub_grade':sub_grade,'emp_length':emp_length,'annual_inc':annual_inc,'dti':dti,'earliest_cr_line':earliest_cr_line,'open_acc':open_acc,'pub_rec':pub_rec,'revol_bal':revol_bal,'revol_util':revol_util,'total_acc':total_acc,'pub_rec_bankruptcies':pub_rec_bankruptcies,'mort_acc':mort_acc}) as child:
                 child.add_event("model get DATA")
-                data = np.array([[int(loan_amount),int(term),int(int_rate),int(installment),int(sub_grade),int(emp_length),int(annual_inc),int(dti),int(earliest_cr_line),int(open_acc),int(pub_rec),int(revol_bal),int(revol_util),int(total_acc),int(pub_rec_bankruptcies),int(mort_acc)]])
+                data = [[int(loan_amount),int(term),int(int_rate),int(installment),int(sub_grade),int(emp_length),int(annual_inc),int(dti),int(earliest_cr_line),int(open_acc),int(pub_rec),int(revol_bal),int(revol_util),int(total_acc),int(pub_rec_bankruptcies),int(mort_acc)]]
                 pred = loaded_model.predict(data)
                 trace.get_current_span()
             trace.get_current_span()
@@ -91,3 +87,5 @@ def index():
             return render_template("result.html",result = str(pred[0]))
     return render_template("index.html");   
 
+if __name__ == "__main__":
+    app.run(host ='0.0.0.0', port = 5000, debug = True) 
