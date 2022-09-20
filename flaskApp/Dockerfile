@@ -1,5 +1,7 @@
 # start by pulling the python image
-FROM python:3.10-alpine
+FROM python:3.10
+
+RUN pip install numpy
 
 # copy the requirements file into the image
 COPY /requirements.txt /requirements.txt
@@ -16,6 +18,6 @@ RUN ls
 
 # copy every content from the local file to the image
 
-EXPOSE 5000:5000
+EXPOSE 5000
 
 CMD ["python","app.py"]
